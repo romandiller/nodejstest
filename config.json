@@ -1,0 +1,9 @@
+{
+	"port" : 5555,
+	"host" : "allmax.localhost"	,
+	"secret" : "b6264fca8adf457fa94f5a4b0d1ca2b9",
+	"mongo" : {
+		"url" : "mongodb://localhost:27017",
+    	"name" : "test"
+	}
+}

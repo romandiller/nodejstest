@@ -1,0 +1,48 @@
+<section id="home">
+    <h2>workstation</h2>
+    <p>Welcome, <%= user.name%>, <a href="/logout">Выйти</a></p>
+</section>
+<section id="list">
+	<h2>Список задач на сегодня</h2>
+	<p>Для сортировка просто нажимайте на ячейки со стрелками!</p>
+	<table class="table" id="table">
+		<thead>
+			<tr>
+				<th>Менеджер</th>
+				<th>Задача</th>
+				<th data-action="default">
+					Приоритет
+					<div class="arrows">
+						<svg viewBox="0 0 50 50" class="up">
+							<polygon points="24.8,3 2.3,48 47.3,48 ">
+						</svg>
+						<svg viewBox="0 0 50 50" class="down">
+							<polygon points="24.8,48 47.3,3 2.3,3 ">
+						</svg>
+					</div>
+				</th>
+				<th data-action="default">
+					Ход выполнения, %
+					<div class="arrows">
+						<svg viewBox="0 0 50 50" class="up">
+							<polygon points="24.8,3 2.3,48 47.3,48 ">
+						</svg>
+						<svg viewBox="0 0 50 50" class="down">
+							<polygon points="24.8,48 47.3,3 2.3,3 ">
+						</svg>
+					</div>					
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% tasks.forEach((item) => { %>
+				<tr>
+					<td><%=item.owner%></td>
+					<td><%=item.task%></td>
+					<td><%=item.priority%></td>
+					<td><%=item.progress%></td>
+				</tr>
+			<% }) %>
+		</tbody>
+	</table>
+</section>

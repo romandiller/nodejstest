@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head><%- include ./blocks/head %></head>
+<body>
+<main><%- include(template) %></main>
+<%- include ./blocks/footer %>
+<script src="<%= assetFingerprint('public/javascripts/scripts.min.js') %>"></script>
+</body>
+</html>
